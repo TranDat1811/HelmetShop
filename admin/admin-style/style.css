@@ -1,0 +1,95 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.container{
+	width: 90%;
+	margin: auto;
+	border: solid 1px #000;
+}
+.header{
+	width: 100%;
+	padding: 20px 0px;
+	background: lightblue;
+}
+.header h3{
+	text-align: center;
+	color: red;
+	display: block;
+	font-size: 40px;
+	
+}
+.menu{
+	height: 40px;
+	width: 100%;
+	background: green;
+}
+.menu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.menu ul li{
+	float: left;
+	margin-right: 11px;
+
+}
+.menu a{
+	text-decoration: none;
+	color: #000;
+	line-height: 40px;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 5px;
+}
+.menu .admin{
+	float: right;
+	margin-right: 1px;
+}
+.menu a:hover{
+	color: #fff;
+}
+.content{
+	margin-top: 10px;
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+.clear{
+	clear: both;
+}
+.footer{
+	width: 100%;
+	height: 100px;
+	
+}
+table{
+	margin:auto;
+	text-align:left;
+ 	font-size: 18px;
+ 	border-collapse: collapse;
+ }
+table tr {
+	border: none;
+}
+table input{
+	width: 100%;
+}
+table .header{
+	background: orange;
+}
+.left{
+	
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+.right{
+	float:right;
+	margin-top: 20px;
+	width:100%;
+	height: auto;
+	
+}

@@ -1,0 +1,333 @@
+  @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+/*-----------*/
+*{
+    box-sizing: border-box;	
+}
+body{
+	margin: 0px;
+  padding: 0px;
+  font-family:'Arial', sans-serif;
+  height: 100%;
+  background: #EEEEEE;
+}
+table{
+  background: #fff;
+}
+/*----------------*/
+.container{
+    width: 100%;
+    height: 100%;
+    background: #EEEEEE;;
+    margin: auto;
+    padding: auto;
+    position: relative;
+    font-size: 15px;
+}
+.container a{
+    text-decoration: none;
+}
+.contanier a:hover{
+  transition: 0.5s;
+}
+/*-----All class="list-header"-------*/
+.list-header{
+  width: 100%;
+  background-color: orange;
+  color: #fff;
+  font-size: 20px;
+  margin: 0px;
+  text-align: center;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+
+}
+/*----------BANNER--------*/
+.banner{
+  max-width: 90%;
+  margin: auto;
+  margin-top: 95px;
+  min-height: 100px;
+  
+}
+.banner img{
+  width: 100%;
+  height: 100%;
+}
+/*---------LOGO--------*/
+.logo{
+  color: yellow;
+  font-family: '',sans-serif;
+  height: 60px;
+  font-size: 36px;
+  line-height: 60px;
+  padding: 0 20px;
+  text-align: center;
+  box-sizing: border-box;
+  float: left;
+  font-weight: 700;
+  text-decoration: none;
+}
+/*----------Menu ngang----------*/
+header{
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  background: #2c3e50;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 2);
+  position: fixed;
+  top: 0px;
+}
+nav{
+  float: right;
+}
+.clearfix{
+  clear: both;
+}
+nav ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav ul li{
+  list-style: none;
+}
+nav ul li a{
+  display: block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  font-size: 17px;
+}
+nav ul li :hover{
+  color: #069370;
+  transition: 0.5s;
+}
+nav ul li a.active{
+  background: #069370;
+  color: #fff;
+}
+@media (max-width: 1200px){
+  header{
+      margin: 20px; 
+  }
+}
+@media (max-width: 1300px){
+  .menu-toggle{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    float: right;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+  }
+  .menu-toggle:before{
+    content: '\f0c9';
+    font-family: fontAwesome;
+    line-height: 40px;
+  }
+  .menu-toggle.active:before{
+    content: '\f00d';
+  }
+  nav{
+    display: none;
+  }
+  nav.active{
+    display: block;
+    width: 100%;
+  }
+  nav.active ul{
+    display: block;
+  }
+  nav.active ul li a{
+    margin: 0;
+  }
+  header{
+    margin: 0px;
+  }
+}
+nav ul li .id-product{
+    position: relative;
+}
+nav ul li .list-product{
+  display: none;
+  position: absolute;
+  background: #2c3e50;
+  width: 120px;
+}
+
+.id-product:hover .list-product{
+  display: block;
+}
+/*------Phần tìm kiếm-------*/
+nav ul li.search-container {
+  display: block;
+  margin: auto;
+}
+nav ul li.search-container input[type=text]{
+  padding: 6px;
+  font-size: 15px;
+}
+nav ul li.search-container input[type=text]:hover{
+  border-radius: 5px;
+}
+nav ul li.search-container button{
+  padding: 8px;
+  margin-left: -5px;
+  background: #ddd;
+  cursor: pointer;
+  font-size: 16px;
+}
+nav ul li.search-container button:hover{
+  border-radius: 5px;
+}
+/*--------------CONTENT-----------*/
+.content{
+  width: 90%;
+  padding: 10px;
+  overflow: hidden;
+  margin:0 auto;
+  margin-top: 10px;
+}
+.clear{
+  clear: both;
+}
+/*------------MENU-DOC--------------*/
+.vertical-menu{
+  width: 20%;
+  float: left;
+  border: solid 1px #ccc; 
+  border-radius: 4px;
+}
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  background: #fff;
+}
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+
+@media screen and (max-width: 1300px){
+  .vertical-menu {
+    float: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .content .product{
+    margin: 0px;
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+/*------------SAN PHAM-------------*/
+.product{
+  float: left;
+  width: 79%;
+  margin-left: 10px;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px #ccc;
+  
+}
+.product a.hanghoa{
+  margin: 0.8%;
+  border: solid 1px #ccc;
+  padding: 1px;
+  width: 15%;
+  min-height: 100px;
+  overflow: hidden;
+  background: #ffffff;
+}
+.product img{
+  width: 100%;
+  height: 190px;
+  padding: 5px;
+  display: block;
+  margin:0 auto;
+  vertical-align: middle;
+  border-style: none;
+}
+.product .product-infor{
+  margin: auto;
+  margin-top: 5px;
+  padding-bottom: 5px;
+}
+.product .product-name{
+  font-weight: bold;
+  color: blue;
+  font-size: 14px;
+  text-align: center;
+}
+.product .product-price{
+  margin-top: 5px;
+  color: red;
+  /*font-weight: bold;*/
+  text-align: center;
+}
+
+.product a.hanghoa:hover{
+  box-shadow: 0px 0px 15px gray;
+  background: #fff;
+  transition-duration: 0.5s;
+  
+}
+@media screen and (max-width: 768px){
+  .product {
+    float: none;
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  .product a.hanghoa{
+    margin: 1.5%;
+    width: 30%;
+  }
+}
+
+/*------FOOTER-------*/
+.footer{
+  width: 100%;
+  padding: 6px 0;
+  background-color: #2c3e50;
+  color: #fff;
+  display: block;
+}
+.footer ul{
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+ 
+}
+
+.footer .list-inline-item a{
+  color: #fff;
+}
+.footer .list-inline-item:not(:last-child) {
+  margin-right: .5rem;
+}
+.footer ul li{
+  display: inline-block;
+  padding: 0 10px;
+}
+.footer ul li a:hover{
+  color: green;
+  
+}
