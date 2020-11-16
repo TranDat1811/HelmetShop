@@ -244,10 +244,11 @@ nav ul li.search-container button:hover{
   
 }
 .product a.hanghoa{
-  margin: 0.8%;
+text-align: center;
+  margin: 0.5%;
   border: solid 1px #ccc;
   padding: 1px;
-  width: 15%;
+  width: 19%;
   min-height: 100px;
   overflow: hidden;
   background: #ffffff;
@@ -262,17 +263,21 @@ nav ul li.search-container button:hover{
   border-style: none;
 }
 .product .product-infor{
+  
   margin: auto;
   margin-top: 5px;
   padding-bottom: 5px;
 }
 .product .product-name{
+
+	min-height: 50px;
   font-weight: bold;
   color: blue;
   font-size: 14px;
   text-align: center;
 }
 .product .product-price{
+	
   margin-top: 5px;
   color: red;
   /*font-weight: bold;*/

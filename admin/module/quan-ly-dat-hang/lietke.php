@@ -1,6 +1,6 @@
 <?php
   $sql=" SELECT * FROM dathang";
-  $result = mysql_query($sql);
+  $result = mysqli_query($conn,$sql);
 
 ?>
 <table width="90%" border="1" style="text-align: center;">
@@ -13,7 +13,7 @@
     <th colspan="3">Quản lí</th>
   </tr>
   <?php
-    while ($row=mysql_fetch_array($result)) {
+    while ($row=mysqli_fetch_array($result)) {
   ?>
   <tr>
     <td><?php echo $row['SoDonDH'] ?></td>

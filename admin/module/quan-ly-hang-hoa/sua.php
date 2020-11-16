@@ -1,7 +1,7 @@
 <?php 
 	$sql="SELECT * FROM hanghoa WHERE MSHH='$_GET[MSHH]' ";
-	$result=mysql_query($sql);
-	$row=mysql_fetch_array($result);
+	$result=mysqli_query($conn,$sql);
+	$row=mysqli_fetch_array($result);
 ?>
   
 <form action="module/quan-ly-hang-hoa/xuly.php?MSHH=<?php echo $row['MSHH'] ?>" method="post" enctype="multipart/form-data">
@@ -27,13 +27,13 @@
 	</tr>
 	<?php 
 		$sql_nhomhanghoa="SELECT * FROM nhomhanghoa";
-		$result_nhomhanghoa=mysql_query($sql_nhomhanghoa);
+		$result_nhomhanghoa=mysqli_query($conn,$sql_nhomhanghoa);
 	?>
 	<tr>
 		<td>Mã nhóm hàng hóa</td>
 		<td><select name="MaNhom" >
 			<?php 
-				while ($row_nhomhanghoa=mysql_fetch_array($result_nhomhanghoa)) {
+				while ($row_nhomhanghoa=mysqli_fetch_array($result_nhomhanghoa)) {
 					if($row['MaNhom'] == $row_nhomhanghoa['MaNhom']){
 			?>
 			<option selected="selected"  value="<?php echo $row_nhomhanghoa['MaNhom'] ?>" ><?php echo $row_nhomhanghoa['TenNhom']

@@ -80,8 +80,8 @@
 			{
 			
 				$tv="select MSHH,TenHH,Gia,SoLuongHang from hanghoa where MSHH='".$_SESSION['id_them_vao_gio'][$i]."'";
-				$tv_1=mysql_query($tv);
-				$tv_2=mysql_fetch_array($tv_1);
+				$tv_1=mysqli_query($conn,$tv);
+				$tv_2=mysqli_fetch_array($tv_1);
 				
 				$tien=$tv_2['Gia']*$_SESSION['sl_them_vao_gio'][$i];
 				$tong_cong=$tong_cong+$tien;
@@ -94,7 +94,7 @@
 					echo "<td>";
 					echo "<input type='hidden' name='".$name_id."' value='".$_SESSION['id_them_vao_gio'][$i]."' >";
 
-					echo "<input type='text' style='width:50px' name='".$name_sl."' value='". $_SESSION['sl_them_vao_gio'][$i]."' > ";
+					echo "<input type='number' style='width:50px' name='".$name_sl."' value='". $_SESSION['sl_them_vao_gio'][$i]."' > ";
 					echo "</td>";
 					echo "<td>".number_format($tv_2['Gia'])."</td>";
 					echo "<td>".number_format($tien)."</td>";

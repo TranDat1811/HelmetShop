@@ -1,5 +1,6 @@
 <div class="left">
 	<?php
+		include '../connect.php';
 		if(isset($_GET['ac'])){
 			$tam=$_GET['ac'];
 		}else{

@@ -11,7 +11,7 @@
     // }
 
     $sql_all="SELECT * FROM hanghoa";
-    $result_all = mysql_query($sql_all);
+    $result_all = mysqli_query($conn,$sql_all);
 ?>
  
 
@@ -19,7 +19,7 @@
     <!-- Danh sách tất cả sản phẩm -->
     <p class="list-header">Tất cả sản phẩm</p>
                     <?php
-                        while ($row_all=mysql_fetch_array($result_all)) {
+                        while ($row_all=mysqli_fetch_array($result_all)) {
                     ?>
             <a class="hanghoa" href="index.php?xem=chitiethanghoa&MaNhom=<?php echo $row_all['MaNhom'] ?>&MSHH=<?php echo $row_all['MSHH'] ?>">
                     <img src="admin/module/quan-ly-hang-hoa/uploads/<?php echo $row_all['Hinh'] ?>" alt="product" />

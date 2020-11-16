@@ -3,13 +3,13 @@
 	$id=$_GET['SoDonDH'];
 	$id_kh=$_GET['MSKH'];
 	$tv="select * from dathang where SoDonDH='$id' and MSKH='$id_kh' ";
-	$tv_1=mysql_query($tv);
-	$tv_2=mysql_fetch_array($tv_1);
+	$tv_1=mysqli_query($conn,$tv);
+	$tv_2=mysqli_fetch_array($tv_1);
 
 	$id_kh=$_GET['MSKH'];
 	$sql_kh="select * from khachhang where MSKH='$id_kh' ";
-	$result_kh=mysql_query($sql_kh);
-	$row_kh=mysql_fetch_array($result_kh);
+	$result_kh=mysqli_query($conn,$sql_kh);
+	$row_kh=mysqli_fetch_array($result_kh);
 	
 	$ten_nguoi_mua=$row_kh['HoTenKH'];
 	
@@ -51,8 +51,8 @@
 								$id_sp=$m_2[0];
 								$sl_sp=$m_2[1];
 								$tv_sp="select MSHH,TenHH,Gia from hanghoa where MSHH='$id_sp' ";
-								$tv_sp_1=mysql_query($tv_sp);
-								$tv_sp_2=mysql_fetch_array($tv_sp_1);
+								$tv_sp_1=mysqli_query($conn,$tv_sp);
+								$tv_sp_2=mysqli_fetch_array($tv_sp_1);
 								$ten=$tv_sp_2['TenHH'];
 								$gia=$tv_sp_2['Gia'];
 								

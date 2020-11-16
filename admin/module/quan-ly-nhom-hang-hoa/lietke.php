@@ -1,6 +1,6 @@
 <?php
   $sql=" SELECT * FROM nhomhanghoa";
-  $result = mysql_query($sql);
+  $result = mysqli_query($conn,$sql);
 ?>
 
 <style>
@@ -15,7 +15,7 @@
     <th colspan="2">Quản lí</th>
   </tr>
   <?php
-    while ($row=mysql_fetch_array($result)) {
+    while ($row=mysqli_fetch_array($result)) {
   ?>
   <tr>
     <td><?php echo $row['MaNhom'] ?></td>

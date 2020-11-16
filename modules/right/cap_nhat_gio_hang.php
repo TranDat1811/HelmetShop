@@ -1,5 +1,6 @@
 <div class="product">
 <?php 
+	session_start();
 	for($i=0;$i<count($_SESSION['id_them_vao_gio']);$i++)
 	{
 		$name_id="id_".$i;

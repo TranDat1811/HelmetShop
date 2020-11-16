@@ -1,6 +1,6 @@
 <?php
     $sql_abc ='SELECT * FROM nhomhanghoa ';
-    $result_abc=mysql_query($sql_abc);
+    $result_abc=mysqli_query($conn,$sql_abc);
  ?>
 <div class="top">
     <header>

@@ -16,7 +16,7 @@
 		if($MSHH!='' && $TenHH!='' && $Gia!='' && $SoLuongHang!='' && $MaNhom!='' && $Hinh!='' ){
 		$sql ="INSERT INTO hanghoa (MSHH,TenHH,Gia,SoLuongHang,MaNhom,Hinh,MoTaHH) values ('$MSHH','$TenHH','$Gia','$SoLuongHang','$MaNhom','$Hinh','$MoTaHH') ";
 		}	
-		mysql_query($sql);
+		mysqli_query($conn,$sql);
 		header('location:../../index.php?quanly=quan-ly-hang-hoa&ac=them');
 	}elseif(isset($_POST['sua'])) {
 		//sua
@@ -25,12 +25,12 @@
 		}else{
 			$sql="UPDATE hanghoa set MSHH='$MSHH',TenHH='$TenHH',Gia='$Gia',SoLuongHang='$SoLuongHang',MaNhom='$MaNhom',MoTaHH='$MoTaHH' where MSHH='$MSHH2'   ";
 		}
-		mysql_query($sql);
+		mysqli_query($conn,$sql);
 		header('location:../../index.php?quanly=quan-ly-hang-hoa&ac=sua&MSHH='.$MSHH);
 	}else{
 		//xoa
 		$sql = "DELETE FROM hanghoa WHERE MSHH = '$MSHH2' ";
-		mysql_query($sql);
+		mysqli_query($conn,$sql);
 		header('location:../../index.php?quanly=quan-ly-hang-hoa&ac=them');
 	}
 ?>

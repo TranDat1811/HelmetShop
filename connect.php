@@ -1,8 +1,5 @@
 <?php
-	//connect to MySQL
-	$conn = mysql_connect('localhost','root','') or die(mysql_error());
-	$db = mysql_select_db("quanlybanhang", $conn) or die(mysql_error());
-	
-
-	mysql_query('SET NAMES "UTF8"');
+	//connect to mysqli
+	$conn = mysqli_connect('localhost','root','',"quanlybanhang") or die(mysqli_error());
+	mysqli_query($conn,'SET NAMES "UTF8"');
 ?>

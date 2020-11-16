@@ -1,12 +1,12 @@
-<div class="product">
+    <div class="product">
     <div class="list-header">Chi tiết sản phẩm</div>
 
 <?php
     $_SESSION['trang_chi_tiet_gio_hang']="co";
     $id=$_GET['MSHH'];
     $tv="select * from hanghoa where MSHH='$id'";
-    $tv_1=mysql_query($tv);
-    $tv_2=mysql_fetch_array($tv_1);
+    $tv_1=mysqli_query($conn,$tv);
+    $tv_2=mysqli_fetch_array($tv_1);
     $link_anh="admin/module/quan-ly-hang-hoa/uploads/".$tv_2['Hinh'];
     echo "<table style='font-size:18px;'>";
         echo "<tr>";
@@ -47,12 +47,12 @@
 ?>
     <!--Sản phẩm cùng loại-->
     <?php
-        $sql_spcungloai=mysql_query("SELECT * FROM hanghoa WHERE MaNhom='$_GET[MaNhom]' and hanghoa.MSHH<>'$_GET[MSHH]' ");
+        $sql_spcungloai=mysqli_query($conn,"SELECT * FROM hanghoa WHERE MaNhom='$_GET[MaNhom]' and hanghoa.MSHH<>'$_GET[MSHH]' ");
     ?>
 
     <p class="list-header" style="margin-top: 10px;">Sản phẩm cùng loại</p>
                     <?php
-                        while ($row_spcungloai=mysql_fetch_array($sql_spcungloai)) {
+                        while ($row_spcungloai=mysqli_fetch_array($sql_spcungloai)) {
                     ?>
             <a class="hanghoa" href="index.php?xem=chitiethanghoa&MaNhom=<?php echo $row_spcungloai['MaNhom'] ?>&MSHH=<?php echo $row_spcungloai['MSHH'] ?>">
                     <img src="admin/module/quan-ly-hang-hoa/uploads/<?php echo $row_spcungloai['Hinh'] ?>" alt="product"/>
