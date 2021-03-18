@@ -1,2 +1,2 @@
 #sdshop : helmet fullface
-Html, css, js, bootstra, php, mysql
+Html, css, js, bootstrap, php, mysql
